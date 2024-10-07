@@ -14,34 +14,47 @@
     <div class="main-content">
       <main>
         <header>
-          <div class="hero-content">
-            <div class="hero">
-              <img
-                src="./images/picture/olly-on-coffee-while-working-ratio-1.jpg"
-                alt="Cristen Olly drinking coffee on work"
-              />
-              <h1 id="personal-name">Cristen Olly</h1>
+          <div class="blue-slide"></div>
+          <div class="hero">
+            <div class="hero-content">
+              <picture>
+                <source
+                  media="(max-width: 480px)"
+                  srcset="
+                    ./images/picture/olly-on-coffee-while-working-300w.jpg
+                  "
+                />
+                <source
+                  media="(max-width: 640px)"
+                  srcset="
+                    ./images/picture/olly-on-coffee-while-working-400w.jpg
+                  "
+                />
+                <img
+                  src="./images/picture/olly-on-coffee-while-working-400w.jpg"
+                  alt=""
+                />
+              </picture>
+              <h1 class="personal-name">Cristen Olly</h1>
             </div>
-            <div class="hero-text">
-              <h2>About Me</h2>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
-                consequatur a placeat repellendus dolorem minima odit amet, et
-                quasi. Aliquam sunt, inventore ad perferendis rerum voluptatibus
-                laboriosam. Modi, labore soluta! Lorem ipsum dolor sit amet
-                consectetur adipisicing elit. Quidem nobis expedita voluptas
-                dolore quod veniam ex, possimus in iusto soluta repellendus
-                labore aliquid amet eveniet autem dolorum dolor quas odit.
-              </p>
-              <div class="my-social">
-                <a href="">
-                  <img src="./images/icons/github.svg" alt="github" />
-                </a>
-                <a href="">
-                  <img src="./images/icons/linkedin.svg" alt="linkedIn" />
-                </a>
-                <a href=""><img src="./images/icons/x.svg" alt="x" /> </a>
-              </div>
+            <h2 class="about-me">About Me</h2>
+            <p class="about-me-para">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+              consequatur a placeat repellendus dolorem minima odit amet, et
+              quasi. Aliquam sunt, inventore ad perferendis rerum voluptatibus
+              laboriosam. Modi, labore soluta! Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Quidem nobis expedita voluptas
+              dolore quod veniam ex, possimus in iusto soluta repellendus labore
+              aliquid amet eveniet autem dolorum dolor quas odit.
+            </p>
+            <div class="my-social">
+              <a href="">
+                <img src="./images/icons/github.svg" alt="github" />
+              </a>
+              <a href="">
+                <img src="./images/icons/linkedin.svg" alt="linkedIn" />
+              </a>
+              <a href=""><img src="./images/icons/x.svg" alt="x" /> </a>
             </div>
           </div>
         </header>
@@ -53,14 +66,12 @@
             <div class="card">
               <article>
                 <div class="project-picture">
-                  <img src="" alt="" />
-
                   <h3>screenshot of project</h3>
                 </div>
 
                 <div class="project">
                   <div class="project-source">
-                    <h4>project-name</h4>
+                    <h4>Project name</h4>
                     <a href="">
                       <img src="./images/icons/github.svg" alt="github" />
                     </a>
@@ -81,14 +92,12 @@
             <div class="card">
               <article>
                 <div class="project-picture">
-                  <img src="" alt="" />
-
                   <h3>screenshot of project</h3>
                 </div>
 
                 <div class="project">
                   <div class="project-source">
-                    <h4>project-name</h4>
+                    <h4>Project name</h4>
                     <a href="">
                       <img src="./images/icons/github.svg" alt="github" />
                     </a>
@@ -109,14 +118,12 @@
             <div class="card">
               <article>
                 <div class="project-picture">
-                  <img src="" alt="" />
-
                   <h3>screenshot of project</h3>
                 </div>
 
                 <div class="project">
                   <div class="project-source">
-                    <h4>project-name</h4>
+                    <h4>Project name</h4>
                     <a href="">
                       <img src="./images/icons/github.svg" alt="github" />
                     </a>
@@ -137,14 +144,12 @@
             <div class="card">
               <article>
                 <div class="project-picture">
-                  <img src="" alt="" />
-
                   <h3>screenshot of project</h3>
                 </div>
 
                 <div class="project">
                   <div class="project-source">
-                    <h4>project-name</h4>
+                    <h4>Project name</h4>
                     <a href="">
                       <img src="./images/icons/github.svg" alt="github" />
                     </a>
@@ -165,14 +170,12 @@
             <div class="card">
               <article>
                 <div class="project-picture">
-                  <img src="" alt="" />
-
                   <h3>screenshot of project</h3>
                 </div>
 
                 <div class="project">
                   <div class="project-source">
-                    <h4>project-name</h4>
+                    <h4>Project name</h4>
                     <a href="">
                       <img src="./images/icons/github.svg" alt="github" />
                     </a>
@@ -193,14 +196,12 @@
             <div class="card">
               <article>
                 <div class="project-picture">
-                  <img src="" alt="" />
-
                   <h3>screenshot of project</h3>
                 </div>
 
                 <div class="project">
                   <div class="project-source">
-                    <h4>project-name</h4>
+                    <h4>Project name</h4>
                     <a href="">
                       <img src="./images/icons/github.svg" alt="github" />
                     </a>
@@ -235,38 +236,42 @@
                 1234 Random Road <br />
                 Random Town, California 12345
               </p>
-              <a href="mailto:example@yahoo.com">example@yahoo.com</a>
-              <a href="tel:+123456789">+12 (34) 567-890</a>
+              <a href="mailto:example@yahoo.com">
+                <img src="images/icons/email.svg" alt="email" />
+                example@yahoo.com</a
+              >
+              <a href="tel:+123456789">
+                <img src="images/icons/phone.svg" alt="phone" /> +12 (34)
+                567-890</a
+              >
             </address>
             <div class="my-socials">
-              <a href=""
-                ><img src="./images/icons/github.svg" alt="github"
-              /></a>
-              <a href=""
-                ><img src="./images/icons/linkedin.svg" alt="linkedin"
-              /></a>
+              <a href="">
+                <img src="./images/icons/github.svg" alt="github" />
+              </a>
+              <a href="">
+                <img src="./images/icons/linkedin.svg" alt="linkedin" />
+              </a>
               <a href=""><img src="./images/icons/x.svg" alt="x" /></a>
             </div>
           </section>
           <div class="personal-picture">
-            <picture>
-              <source
-                media="(max-width: 1399px)"
-                srcset="
-                  images/picture/olly-on-paper-look-while-working-portrait.jpg
-                "
-              />
-              <source
-                media="(min-width: 1400px)"
-                srcset="
-                  images/picture/olly-on-paper-look-while-working-700w.jpg
-                "
-              />
-              <img
-                src="images/picture/olly-on-paper-look-while-working.jpg"
-                alt="olly on paper look while working and looking at someone with smiling face"
-              />
-            </picture>
+            <source
+              media="(max-width: 480px)"
+              srcset="
+                ./images/picture/olly-on-paper-look-while-working-300w.jpg
+              "
+            />
+            <source
+              media="(max-width: 640px)"
+              srcset="
+                ./images/picture/olly-on-paper-look-while-working-400w.jpg
+              "
+            />
+            <img
+              src="./images/picture/olly-on-paper-look-while-working-300w.jpg"
+              alt=""
+            />
           </div>
         </div>
       </footer>
