@@ -1,0 +1,325 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "playfair display regular";
+  src: url(../fonts/playfair-display/playfairdisplay-regular-webfont.woff)
+      format(woff),
+    url(../fonts/playfair-display/playfairdisplay-regular-webfont.woff2)
+      format(woff2);
+}
+
+@font-face {
+  font-family: "roboto regular";
+  src: url(../fonts/roboto/roboto-regular-webfont.woff) format(woff),
+    url(../fonts/roboto/roboto-regular-webfont.woff2) format(woff2);
+}
+
+*,
+*::before,
+*::after {
+  --icon-size: 32px;
+  --playfair-regular: "playfair display regular", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+  --roboto-regular: "roboto regular", system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell,
+    "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.my-social a > img,
+.project-source a > img,
+.my-socials a > img,
+address a > img {
+  width: var(--icon-size);
+}
+header {
+  position: relative;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+h1.personal-name {
+  font-size: clamp(72px, 5vw, 100px);
+  color: white;
+  text-shadow: 0 0 5px black;
+  font-family: var(--playfair-regular);
+  transform: translate(0rem, -10rem);
+  position: absolute;
+}
+h2.about-me {
+  padding: 2rem 1rem 1rem;
+  font-size: clamp(32px, 5vw, 48px);
+  font-family: var(--playfair-regular);
+}
+p.about-me-para {
+  font-family: var(--roboto-regular);
+  font-size: clamp(14px, 5vw, 24px);
+  color: #4a4a4a;
+  line-height: 1.5;
+}
+.my-social {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+.blue-slide {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: palegoldenrod;
+  z-index: -2;
+  box-shadow: 0 0 10px #000000;
+  transform: translateY(-37rem) skew(0deg, 326deg);
+}
+
+.card:nth-child(1) > article .project-picture {
+  background-color: firebrick;
+}
+.card:nth-child(2) > article .project-picture {
+  background-color: blueviolet;
+}
+.card:nth-child(3) > article .project-picture {
+  background-color: rebeccapurple;
+}
+.card:nth-child(4) > article .project-picture {
+  background-color: indigo;
+}
+.card:nth-child(5) > article .project-picture {
+  background-color: cadetblue;
+}
+.card:nth-child(6) > article .project-picture {
+  background-color: teal;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 300px);
+  gap: 3rem;
+  justify-content: center;
+}
+.card {
+  box-shadow: 0 0 17px #00000050;
+}
+.project-picture {
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+}
+
+.project-picture > h3 {
+  font-size: clamp(58px, 5vw, 72px);
+  color: white;
+}
+.project-source {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+
+.project-source > a:nth-child(3) {
+  padding-right: 1rem;
+}
+
+.project-source > h4 {
+  flex: 1;
+  font-family: var(--playfair-regular);
+  font-size: clamp(20px, 5vw, 48px);
+  padding-left: 2rem;
+}
+.project-source + p {
+  color: #4a4a4a;
+  font-family: var(--roboto-regular);
+  padding: 1rem;
+  line-height: 1.5;
+  min-height: 100px;
+  font-size: clamp(14px, 5vw, 18px);
+}
+main section {
+  padding: 5rem 0;
+}
+main section h2 {
+  text-align: center;
+  font-size: clamp(32px, 5vw, 72px);
+  padding: 1rem;
+}
+.personal-info-pic {
+  padding: 1rem;
+}
+.personal-info-pic h2 {
+  font-size: clamp(48px, 6vw, 62px);
+  font-family: var(--playfair-regular);
+  text-align: center;
+  color: whitesmoke;
+  padding: 1rem;
+}
+.personal-info-pic p {
+  font-size: clamp(16px, 6vw, 32px);
+  font-family: var(--roboto-regular);
+  padding: 1rem 0;
+  color: whitesmoke;
+}
+footer {
+  background-color: #21415a;
+}
+address {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+address a:nth-child(2),
+address a:nth-child(3) {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: white;
+  font-size: clamp(16px, 6vw, 32px);
+  text-decoration: none;
+}
+.my-socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.personal-picture {
+  display: flex;
+  justify-content: center;
+}
