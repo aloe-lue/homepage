@@ -1,5 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126
    License: none (public domain)
 */
 
@@ -170,7 +169,7 @@ header {
   padding: 1rem;
 }
 h1.personal-name {
-  font-size: clamp(72px, 5vw, 100px);
+  font-size: clamp(48px, 5vw, 72px);
   color: white;
   text-shadow: 0 0 5px black;
   font-family: var(--playfair-regular);
@@ -181,6 +180,7 @@ h2.about-me {
   padding: 2rem 1rem 1rem;
   font-size: clamp(32px, 5vw, 48px);
   font-family: var(--playfair-regular);
+  text-align: center;
 }
 p.about-me-para {
   font-family: var(--roboto-regular);
@@ -192,6 +192,7 @@ p.about-me-para {
   display: flex;
   gap: 1rem;
   padding: 1rem;
+  justify-content: center;
 }
 .blue-slide {
   position: absolute;
@@ -240,8 +241,10 @@ p.about-me-para {
 }
 
 .project-picture > h3 {
-  font-size: clamp(58px, 5vw, 72px);
+  font-size: clamp(32px, 5vw, 64px);
   color: white;
+  padding: 1rem;
+  text-align: center;
 }
 .project-source {
   display: flex;
@@ -258,7 +261,7 @@ p.about-me-para {
 .project-source > h4 {
   flex: 1;
   font-family: var(--playfair-regular);
-  font-size: clamp(20px, 5vw, 48px);
+  font-size: clamp(16px, 3vw, 24px);
   padding-left: 2rem;
 }
 .project-source + p {
@@ -281,14 +284,14 @@ main section h2 {
   padding: 1rem;
 }
 .personal-info-pic h2 {
-  font-size: clamp(48px, 6vw, 62px);
+  font-size: clamp(24px, 5vw, 48px);
   font-family: var(--playfair-regular);
   text-align: center;
   color: whitesmoke;
   padding: 1rem;
 }
 .personal-info-pic p {
-  font-size: clamp(16px, 6vw, 32px);
+  font-size: clamp(14px, 5vw, 24px);
   font-family: var(--roboto-regular);
   padding: 1rem 0;
   color: whitesmoke;
@@ -310,7 +313,7 @@ address a:nth-child(3) {
   align-items: center;
   gap: 1rem;
   color: white;
-  font-size: clamp(16px, 6vw, 32px);
+  font-size: clamp(14px, 5vw, 24px);
   text-decoration: none;
 }
 .my-socials {
@@ -322,4 +325,150 @@ address a:nth-child(3) {
 .personal-picture {
   display: flex;
   justify-content: center;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 321px) {
+  .blue-slide {
+    transform: translateY(-52rem) skew(0deg, 326deg);
+  }
+
+  h1.personal-name {
+    padding: 2rem;
+    transform: translateY(-12rem);
+  }
+  .about-me-para {
+    padding: 1rem 2rem;
+  }
+
+  .personal-info-pic p {
+    padding: 1rem 2rem;
+  }
+
+  address > a:nth-child(2),
+  address > a:nth-child(3) {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 425px) {
+  .blue-slide {
+    transform: translateY(-61rem) skew(0deg, 326deg);
+  }
+  h1.personal-name {
+    padding: 3rem;
+    transform: translateY(-13rem);
+  }
+  .about-me-para {
+    padding: 1rem 3rem;
+  }
+
+  .personal-info-pic p {
+    padding: 1rem 3rem;
+  }
+
+  address > a:nth-child(2),
+  address > a:nth-child(3) {
+    padding: 1rem 3rem;
+  }
+}
+
+@media (max-width: 767px) {
+  *,
+  *::before,
+  *::after {
+    --max-width-for-767-below: 425px;
+  }
+
+  .hero,
+  main section,
+  .personal-info-pic {
+    max-width: var(--max-width-for-767-below);
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .blue-slide {
+    transform: translateY(-36rem) skew(0deg, 344deg);
+  }
+  h1.personal-name {
+    padding: 0rem;
+    transform: translate(-4rem, -5rem);
+    position: static;
+  }
+  main section h2 {
+    text-align: left;
+    font-size: clamp(32px, 5vw, 72px);
+    padding: 2rem 5rem;
+  }
+
+  h2.about-me {
+    text-align: left;
+  }
+
+  .hero-contents {
+    box-shadow: 0 0 20px #00000050;
+    background-color: white;
+  }
+
+  .hero {
+    padding: 7rem 4rem;
+  }
+
+  .hero-contents,
+  .cards,
+  main section h2 {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .hero-content {
+    float: left;
+    /* should come up with even more better solution */
+    max-height: 26rem;
+  }
+  .hero-content > picture {
+    transform: translate(-2rem, -5rem);
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 0 25px #00000050;
+  }
+  .my-social {
+    visibility: hidden;
+  }
+
+  .personal-info-pic {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  h1.personal-name {
+    position: absolute;
+    transform: translate(-2rem, 26rem);
+  }
+  .hero-content > picture {
+    transform: translate(-2rem, -1rem) scale(1.1);
+  }
+
+  .blue-slide {
+    transform: translateY(-14rem) skew(0deg, 344deg);
+  }
+
+  .my-social {
+    visibility: visible;
+    display: flex;
+    justify-content: end;
+  }
+}
+
+@media (min-width: 2560px) {
+  .blue-slide {
+    transform: translateY(0rem) skew(0deg, 0deg);
+  }
 }
